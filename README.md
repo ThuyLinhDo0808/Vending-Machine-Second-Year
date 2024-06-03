@@ -1,2 +1,2 @@
-# APT-Vending-Machine
-Group Project for the course COSC1076 - Advanced Programming Techniques at RMIT
+# VendingMachine_ASM2
+Individual Project for the course COSC1076 - Advanced Programming Techniques at RMIT
