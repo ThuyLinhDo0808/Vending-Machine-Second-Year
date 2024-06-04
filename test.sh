@@ -123,3 +123,25 @@ fi
 # Overwrite actual_foods and actual_coins to reset
 cp ./tests/end2EndTest/before/end2End.actual_foods ./tests/end2EndTest/end2End.actual_foods
 cp ./tests/end2EndTest/before/end2End.actual_coins ./tests/end2EndTest/end2End.actual_coins
+
+# Display Help function test
+# Test the Help functionality
+./ftt ./data/foods.dat ./data/coins.dat < ./tests/displayHelpTest/displayHelp.input > ./tests/displayHelpTest/displayHelp.actual_output
+diff -w ./tests/displayHelpTest/displayHelp.expected_output ./tests/displayHelpTest/displayHelp.actual_output
+if [ $? -eq 0 ]
+then
+    echo "Display Help Test: Passed"
+else
+    echo "Display Help Test: Failed"
+fi
+
+# Display Help function test
+# Test the Help functionality
+./ftt ./data/foods.dat ./data/coins.dat < ./tests/helpCommandTest/helpCommand.input > ./tests/helpCommandTest/helpCommand.actual_output
+diff -w ./tests/helpCommandTest/helpCommand.expected_output ./tests/helpCommandTest/helpCommand.actual_output
+if [ $? -eq 0 ]
+then
+    echo "Display Help Command Test: Passed"
+else
+    echo "Display Help Command Test: Failed"
+fi
